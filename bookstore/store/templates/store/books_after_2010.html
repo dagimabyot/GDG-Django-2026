@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Books Published After 2010</title>
+</head>
+<body>
+    <h1>Books Published After 2010</h1>
+    <ul>
+    {% for book in books %}
+        <li>{{ book.title }} - {{ book.published_date }}</li>
+    {% empty %}
+        <li>No books found</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
